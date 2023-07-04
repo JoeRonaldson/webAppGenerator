@@ -42,4 +42,16 @@ app.get('/', async (req, res) => {
   res.end()
 })
 
+// creates an image at ./image endpoint
+app.get('/image', async (req, res) => {
+  const blob = await hf.textToImage({
+    inputs: `An image of a seal walking on a dog whos walking on a road`,
+    model: 'stabilityai/stable-diffusion-2-1'
+  })
+  const buffer = Buffer.from(await blob.arrayBuffer())
+  res.setHeader('Content-Type', blob.type)
+  res.setHeader('Content-Length', buffer.length)
+  res.end(buffer)
+})
+
 app.listen(port, () => { console.log(`Server started on http://localhost:${port}`) })
