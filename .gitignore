@@ -2,4 +2,3 @@ node_modules
 *.log
 *.bin
 .DS_Store
-README.md
