@@ -1,7 +1,6 @@
 {
-  "name": "template-node-express",
+  "name": "web-app-generator",
   "version": "1.0.0",
-  "description": "A minimalist Docker Space to help people getting started with Node, Express and TypeScript",
   "main": "src/index.mts",
   "scripts": {
     "start": "node --loader ts-node/esm src/index.mts",
@@ -9,8 +8,6 @@
     "docker:build": "docker build -t template-node-express .",
     "docker:run": "docker run -it -p 7860:7860 template-node-express"
   },
-  "author": "Julian Bilcke <julian.bilcke@huggingface.co>",
-  "license": "Apache License",
   "dependencies": {
     "@huggingface/inference": "^2.6.1",
     "@types/express": "^4.17.17",
