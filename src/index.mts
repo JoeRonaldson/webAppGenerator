@@ -25,7 +25,7 @@ app.get('/app', async (req, res) => {
   - No need to write code comments, so please make the code compact (short function names etc)
   - Use a central layout by wrapping everything in a \`<div class="flex flex-col items-center">\`
   # HTML output
-  <html><head></head><body`;
+  <html><head></head><body>`;
 
   for await (const output of hf.textGenerationStream({
     model,

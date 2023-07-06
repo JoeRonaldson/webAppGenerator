@@ -31,7 +31,11 @@
         class="font-mono"
       ></textarea>
       <button class="bg-green-300 rounded p-5" @click="prompt = draft">Generate Web App</button>
-      <iframe :src="`/app?prompt=${prompt}`"></iframe>
+      <iframe
+        id="iframe"
+        class="border-none w-full h-screen"
+        :src="`/app?prompt=${prompt}`"
+      ></iframe>
     </div>
   </body>
 </html>
